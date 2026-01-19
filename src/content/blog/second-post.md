@@ -2,7 +2,7 @@
 title: "Understanding Content Collections"
 description: "A deep dive into Astro's content collections and how to use them effectively."
 date: 2024-01-20
-author: "Jeanne Grenet"
+author: john-doe
 tags: ["astro", "content", "markdown"]
 ---
 

@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 
-const ogImage = new URL("/api/home.png", Astro.url.origin);
+const ogImage = new URL("assets/home.png", Astro.url.origin);
 const posts = await getCollection('blog');
 ---
 

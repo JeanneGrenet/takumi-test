@@ -2,7 +2,7 @@
 title: "Getting Started with Astro"
 description: "Learn the basics of Astro and why it's a great choice for your next project."
 date: 2024-01-20
-author: "Jeanne Grenet"
+author: john-doe
 tags: ["astro", "content", "markdown"]
 ---
 

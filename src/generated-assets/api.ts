@@ -16,7 +16,7 @@ export class NotFoundAssetError extends Error {
 
 export const apiImageEndpoint: (modules: Record<string, unknown>) => APIRoute =
   (modules) =>
-  async ({ params, site, url }) => {
+  async ({ params, site }) => {
     try {
       console.log(`[API] Request: ${params.__image}/${params.__type}`);
 
@@ -45,7 +45,6 @@ export const apiImageEndpoint: (modules: Record<string, unknown>) => APIRoute =
       const component = await content.default({
         params,
         site,
-        url,
       });
       const config = content.config;
 

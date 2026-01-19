@@ -2,7 +2,7 @@
 title: "Building Dynamic OG Images"
 description: "How to generate dynamic Open Graph images for better social media sharing."
 date: 2024-01-25
-author: "Jeanne Grenet"
+author: john-doe
 tags: ["og-images", "social media", "seo"]
 ---
 
