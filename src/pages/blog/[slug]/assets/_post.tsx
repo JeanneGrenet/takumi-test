@@ -45,7 +45,7 @@ export default async function PostOGImage({ params }: PostOGImageParams) {
 
       <div tw="flex flex-col flex-1 justify-center">
         {tags.length > 0 && (
-          <div tw="flex flex-wrap mb-6">
+          <div tw="flex flex-wrap mb-2">
             {tags.slice(0, 3).map((tag: string) => (
               <span
                 key={tag}
@@ -62,7 +62,7 @@ export default async function PostOGImage({ params }: PostOGImageParams) {
         )}
 
         <h1
-          tw="font-bold text-white mb-6"
+          tw="font-bold text-white mb-2"
           style={{
             fontSize: title.length > 50 ? 56 : 72,
             lineHeight: 1.2,
