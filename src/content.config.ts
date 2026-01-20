@@ -24,7 +24,7 @@ const zAuthor = ({ image }: SchemaContext) =>
 
 export const collections = {
   blog: defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
+    loader: glob({ pattern: "**/*.mdx", base: "./src/content/blog" }),
     schema: zPost,
   }),
   author: defineCollection({

@@ -1,3 +1,4 @@
+import { Emoji, extractEmoji } from "@/generated-assets/emoji";
 import { getEntry } from "astro:content";
 
 interface PostOGImageParams {
@@ -28,6 +29,8 @@ export default async function PostOGImage({ params }: PostOGImageParams) {
   const { title, description, tags = [], author: authorId, date } = post.data;
   const author = await getEntry("author", authorId.id);
 
+  const { text: cleanTitle, emojis: titleEmojis } = extractEmoji(title);
+
   return (
     <div
       tw="flex flex-col w-full h-full p-16"
@@ -41,6 +44,10 @@ export default async function PostOGImage({ params }: PostOGImageParams) {
         อิปซัม ดอลอร์ Japanese: 吾輩は猫である Chinese: 天地玄黄宇宙洪荒 Korean:
         국회는 헌법 또는 법률 Arabic: لوريم إيبسوم دولور Russian: Лорем ипсум
         долор Greek: Λορεμ ιπσυμ δολορ
+      </p>
+
+      <p>
+        Astro <Emoji emoji="🚀" /> Takumi <Emoji emoji="🔥" />
       </p>
 
       <div tw="flex flex-col flex-1 justify-center">
@@ -64,12 +71,24 @@ export default async function PostOGImage({ params }: PostOGImageParams) {
         <h1
           tw="font-bold text-white mb-2"
           style={{
-            fontSize: title.length > 50 ? 56 : 72,
+            fontSize: cleanTitle.length > 50 ? 56 : 72,
             lineHeight: 1.2,
+            display: "flex",
+            alignItems: "center",
+            gap: 16,
           }}
         >
-          {title}
+          <span>{cleanTitle}</span>
+
+          {titleEmojis.length > 0 && (
+            <span tw="flex">
+              {titleEmojis.map((emoji, index) => (
+                <Emoji key={index} emoji={emoji} size={64} />
+              ))}
+            </span>
+          )}
         </h1>
+
         {description && (
           <p
             tw="text-3xl"
