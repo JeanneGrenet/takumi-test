@@ -1,5 +1,5 @@
 import { getEntry } from "astro:content";
-import { getAstroImageBase64 } from "@/generated-assets/image";
+import { getAstroImageBase64 } from "@bearstudio/astro-assets-generation";
 
 interface PostOGImageParams {
   params: { slug?: string };

@@ -2,7 +2,7 @@
 // the favicon.ico and other files in the public directory are
 // trying to be generated and it causes issues
 
-import { apiImageEndpoint } from "@/generated-assets/api";
+import { apiImageEndpoint } from "@bearstudio/astro-assets-generation";
 
 import type { APIRoute } from "astro";
 

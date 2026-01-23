@@ -1,4 +1,4 @@
-import { Emoji, extractEmoji } from "@/generated-assets/emoji";
+import { Emoji, extractEmoji } from "@bearstudio/astro-assets-generation";
 import FontWrapper from "@/generated-assets/FontWrapper";
 import { getEntry } from "astro:content";
 
